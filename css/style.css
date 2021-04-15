@@ -1,0 +1,67 @@
+/* Simple style reset */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    vertical-align: middle;
+}
+
+/* App will be used within iFrame, so take whole DOM */
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #E3E3E3;
+}
+
+.visual-html-editor {
+    width: 100%;
+    height: 100%;
+}
+
+/* Line count styles */
+.line-numbers-on {
+    display: inline-block;
+    padding: 0.6em;
+    height: 100%;
+    width: 80%;
+    border-right: 1px solid black;
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: "Monaco", monospace;
+    resize: none;
+    word-break: break-all;
+    overflow-wrap: normal;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.line-numbers-wrapper {
+    width: 2em;
+    padding: 0.7em 0.3em 2em;
+    height: 100%;
+    word-break: break-all;
+    overflow: hidden;
+    display: inline-block;
+    counter-reset: line-count;
+}
+
+.line-numbers-wrapper-line {
+    width: 100%;
+    display: block;
+    text-align: right;
+    line-height: 1.5;
+    font-size: 1em;
+    color: black;
+}
+
+.line-numbers-wrapper-line::before {
+    counter-increment: line-count;
+    content: counter(line-count);
+    font-size: 1em;
+    user-select: none;
+}
