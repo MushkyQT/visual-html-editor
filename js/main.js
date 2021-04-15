@@ -22,7 +22,7 @@ const lineNumberManager = {
     // Set up event listener for enter and backspace that triggers line count update
     // TODO Performance increase potential here for sure.
     // TODO Need scroll event listeners, currently scroll breaks line count (not synced)
-    document.querySelector('#html-editor').addEventListener('keyup', (e) => {
+    document.querySelector('#html-editor-input').addEventListener('keyup', (e) => {
       if (e.key == 'Enter' || e.key == 'Backspace') {
         lineNumberManager.update_numbers(editorInputArea, editorLineNumbers)
       }
@@ -56,4 +56,4 @@ const lineNumberManager = {
   }
 }
 
-lineNumberManager.apply_numbers('#html-editor')
+lineNumberManager.apply_numbers('#html-editor-input')
