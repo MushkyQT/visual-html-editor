@@ -59,6 +59,18 @@ body {
   text-align: center;
 }
 
+.blocks-toolbox-blocks {
+  width: 100%;
+}
+
+.blocks-toolbox-block {
+  display: table;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: coral;
+}
+
 .html-editor {
   height: 100%;
   width: 60%;
