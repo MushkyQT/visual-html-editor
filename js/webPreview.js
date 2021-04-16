@@ -13,10 +13,10 @@ function updatePreview() {
 // start on keyup and execute when no new keyup for 1 second (wait = 1000)
 function debounce(callback, wait) {
   let timeout
-  return () => {
+  return (...args) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => {
-      callback()
+      callback(args)
     }, wait)
   }
 }
